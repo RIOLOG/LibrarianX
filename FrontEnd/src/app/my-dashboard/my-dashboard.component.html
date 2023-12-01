@@ -1,0 +1,28 @@
+<h3 style="color: maroon ; margin:20px">List of borrowed Books</h3>
+<table class="table ">
+  <thead  class="table-light">
+    <tr>
+      <th scope="col">BookId</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody  *ngFor="let item of bookList" >
+    <tr>
+      <th scope="row">{{item.bookid}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.author}}</td>
+      <td>{{item.rating}}</td>
+      <td>{{item.genre}}</td>
+      <td><button type="button" class="btn btn-primary" (click)="returnBook(item.bookid)">Return Book</button></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+
+
+

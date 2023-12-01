@@ -1,0 +1,38 @@
+<body>
+<div class="page-container">
+  <div class="card">
+    <div *ngIf="bookDetails" class="book-details-container">
+      <div class="book-info">
+        <div class="book-cover">
+          <img [src]="bookDetails.image" alt="Book Cover" />
+        </div>
+        <table class="table">
+          <tr>
+            <td><strong>Title:</strong></td>
+            <td>{{ bookDetails.name }}</td>
+          </tr>
+          <tr>
+            <td><strong>Author:</strong></td>
+            <td>{{ bookDetails.author }}</td>
+          </tr>
+          <tr>
+            <td><strong>Genre:</strong></td>
+            <td>{{ bookDetails.genre }}</td>
+          </tr>
+          <tr>
+            <td><strong>Rating:</strong></td>
+            <td>{{ bookDetails.rating }}</td>
+          </tr>
+          <tr>
+            <td><strong>Description:</strong></td>
+            <td>{{ bookDetails.description }}</td>
+          </tr>
+        </table>
+      </div>
+      <button class="form-button" *ngIf="bookpresent && !myBook" (click)="BorrowNow()">Borrow Now</button>
+      <button *ngIf="!bookpresent" class="form-button" style="color: white">Already Borrowed</button>
+      <button *ngIf="bookpresent && myBook" class="form-button" style="color:white">You can't borrow your own book</button>
+    </div>
+  </div>
+</div>
+</body>

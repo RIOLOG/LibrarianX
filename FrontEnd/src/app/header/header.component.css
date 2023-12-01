@@ -1,0 +1,38 @@
+
+.navbar-toggler-icon
+{
+  background-color: lightblue(17, 0, 128); 
+}
+
+.nav-link:hover
+{
+  color: #ecf0f1 !important; 
+}
+
+.name 
+{
+  color: #f39c12;
+}
+
+.navbar
+{
+  background-color:darkblue; 
+}
+
+.navbar-brand,
+.navbar-nav a {
+  text-shadow: 0ch;
+  text-decoration: solid;
+  color: rgb(44, 42, 42) !important; 
+}
+
+
+
+.nav-link.name.profile-name
+{
+    color: black;
+    text-decoration-color: darkblue;
+}
+
+
+  

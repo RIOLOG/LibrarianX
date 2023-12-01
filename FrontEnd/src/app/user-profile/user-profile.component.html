@@ -1,0 +1,54 @@
+<div class="book-details-container">
+  <div class="book-info">
+    <table class="table">
+      <tr>
+        <td><strong>Id:</strong></td>
+        <td>{{ profile?.id }}</td>
+      </tr>
+      <tr>
+        <td><strong>Name:</strong></td>
+        <td>{{ profile?.name }}</td>
+      </tr>
+      <tr>
+        <td><strong>Username:</strong></td>
+        <td>{{ profile?.username }}</td>
+      </tr>
+      <tr>
+        <td><strong>Tokens:</strong></td>
+        <td>{{ profile?.token }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div>
+  <h3 style="color: maroon; margin: 20px">List of My Books</h3>
+  <table class="table ">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">BookId</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of bookList">
+      <tr>
+        <th scope="row">{{ item.bookid }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.author }}</td>
+        <td>{{ item.rating }}</td>
+        <td>{{ item.genre }}</td>
+        <td>
+          <button type="button" class="btn btn-info" *ngIf="!item.isBookAvailable">
+            Borrowed By userId: {{ item.currentlyBorrowedBy }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <br />
+</div>

@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h1 class="login">Login</h1>
+  <div class="custom-card">
+    <form #userLogin="ngForm" class="common-form" (ngSubmit)="onSubmit(userLogin.value)">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" ngModel #username="ngModel" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" ngModel #password="ngModel" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+      <br>
+      <h6>Not yet a registered user? Sign up!</h6>
+      <button type="button" (click)="move()" class="btn btn-secondary">Register</button> <!-- Use a different color for the Register button -->
+    </form>
+  </div>
+</div>
+
+
+

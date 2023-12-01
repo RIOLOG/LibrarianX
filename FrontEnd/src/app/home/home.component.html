@@ -1,0 +1,37 @@
+
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h2>Available Books</h2>
+      <app-search (searchTermChange)="searchBooks($event)"></app-search>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Serial No.</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Rating</th>
+              <th>Genre</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let book of filteredBooks; let i = index">
+              <td>{{ i+1 }}</td>
+              <td>{{ book.name }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.rating }}</td>
+              <td>{{ book.genre }}</td>
+              <td>
+                <button (click)="viewBookDetails(book.bookid)">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

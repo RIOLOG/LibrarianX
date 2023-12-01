@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(177, 158, 197)">
+  <div class="container-fluid">
+    <a class="navbar-brand">LibrarianX</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <ng-container *ngIf="isLoggedIn; else anonymousUser">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
+          <a class="nav-link" [routerLink]="['/home/user/aboutme']">About Me</a>
+          <a class="nav-link" [routerLink]="['/home/user/addbook']">Add Book</a>
+          <a class="nav-link" [routerLink]="['/home/user/dashboard']">My Dashboard</a>
+
+          <a class="nav-link" (click)="logout()">Logout</a>
+          <span class="nav-link name profile-name">Hello, {{ profile?.name }}</span>
+        </ng-container>
+
+        <ng-template #anonymousUser>
+          <a class="nav-link" [routerLink]="['']">Login</a>
+          <a class="nav-link" [routerLink]="['/signup']">Register</a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>

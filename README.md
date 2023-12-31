@@ -45,7 +45,7 @@ Show all the Books From the Database.
 
 **Client:** Angular
 
-**Server:** Net Core UI, Entity Framework
+**Server:** Net Core , Entity Framework, Asp.Net API
 
 **DataBase** SSMS MDatabase 
 

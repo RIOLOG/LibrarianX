@@ -15,7 +15,6 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 
-
 export class AddBookComponent 
 {
   addProductMessage: undefined;
@@ -28,7 +27,7 @@ export class AddBookComponent
       let userData = userStore && JSON.parse(userStore);
       data.lentByUserId = userData;
     }
-    console.log(data);
+    //console.log(data);
     this.bookService.addBook(data).subscribe((result) => {
       if (result) {
         this.toastr.success("Book Added Successfully");

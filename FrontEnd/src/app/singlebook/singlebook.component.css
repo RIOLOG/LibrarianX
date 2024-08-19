@@ -1,22 +1,25 @@
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
   margin: 0;
   padding: 0;
-  font-family: 'Your Preferred Font', sans-serif; 
-  background-color: #f4f4f4; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .page-container {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .card {
-  background-color: #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 8px; 
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .book-details-container {
@@ -27,39 +30,64 @@ body {
 
 .book-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .book-cover img {
-  max-width: 100%;
+  width: 200px;
   height: auto;
-  border-radius: 8px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 2rem;
+}
+
+.book-details {
+  flex-grow: 1;
 }
 
 .table {
   width: 100%;
-  max-width: 400px;
-  margin-top: 20px;
+  border-collapse: collapse;
 }
 
 .table td {
-  padding: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.table td:first-child {
+  font-weight: bold;
+  width: 30%;
+}
+
+.table tr:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .form-button {
-  background-color: #3498db;
+  background-color: #4a90e2;
   color: #fff;
-  padding: 12px 24px;
-  margin-top: 20px;
-  cursor: pointer;
   border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease; /* Add a smooth transition on button hover */
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .form-button:hover {
-  background-color: #1c6ca1; 
+  background-color: #357ab7;
 }
 
+.disabled-button {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
